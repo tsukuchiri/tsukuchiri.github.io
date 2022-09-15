@@ -1,158 +1,266 @@
-*, ::before, ::after {
- box-sizing: border-box;
- scrollbar-width: none;  /* Firefox 対応 */
+:root {
+    --mainColor: #180a00;
+    --subColor: #555;
+    --sideSpace: 0.5rem;
+    --maxWidth: 1080px;
 }
 
-body{
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: 'Noto Sans JP', sans-serif;
-  background-color: #F4F5F7;
-  color: #000;
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    scrollbar-width: none;
+    /* Firefox 対応 */
+}
+
+@font-face {
+    font-family: 'Current';
+    src: url('../font/Current-Regular.otf') format('opentype');
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
+}
+
+main a:hover {
+    opacity: 0.6;
+    filter: brightness(105%);
+}
+
+/* メニュー部 */
+menu {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f5e8be;
+    padding: 5rem var(--sideSpace);
+    text-align: center;
+    overflow-y: scroll;
+    visibility: hidden;
+    -ms-overflow-style: none;
+    /* IE, Edge 対応 */
+    scrollbar-width: none;
+    /* Firefox 対応 */
+}
+
+menu::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari 対応 */
+}
+
+menu>div {
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+menu>div>#menuicon {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+menu>div>#menuicon>img {
+    width: 100%;
 }
 
 
-.hide{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0.7;
-  display: none;
+menu.is-open {
+    visibility: visible;
+    opacity: 1;
 }
-/* ヘッダ部 */
+
+/* ヘッダー */
 header {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  top:0;
-  left: 0;
-  width: 100%;
-  padding-left: calc(50% - 450px - 1rem);
-  height: 62px;
-  background: #fff;
-  z-index: 10;
+    width: 100%;
+    position: fixed;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 50px;
+    background-color: #ffffff;
+    top: 0;
+    z-index: 999;
 }
 
-header>h1{
-  max-width: 205px;
-  padding: 5px 10px;
+header>a {
+    display: block;
 }
 
-header>h1 img{
-  width: 100%;
+header svg {
+    height: 100%;
 }
 
-menu{
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 62px;
-  background-color: #007b43;
-  color: #ede4cd;
-  padding-right: calc(50% - 450px);
-  font-weight: bolder;
-  z-index: 12;
+header use {
+    fill: var(--mainColor);
 }
 
-menu>img{
-  height: 62px;
-  width: 62px;
-  margin-left: -62px;
-  display:block;
+header.is-open {
+    visibility: hidden;
 }
 
-menu>label>img{
-  display: none;
-  height: 62px;
-  width: 62px;
-  cursor: pointer;
+.title {
+    margin: 0 5px;
+    width: calc(100vw - 110px);
+    max-width: 484px;
 }
 
-menu a{
-  text-decoration-line: none;
-  color: #ede4cd;
-  padding: 20px;
-}
-nav>label{
-  display: none;
+.space {
+    width: 40px;
+    flex-shrink: 0;
 }
 
-#menuOpen{
-  display: none;
+.menu-btn {
+    position: relative;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
 }
 
-/* モバイル向けヘッダ・メニュー */
-@media screen and (max-width: 650px) {
-/* 650pxまでの幅の場合に適応される */
-menu{
-  left: 100%;
-  height: 100%;
-  width: 300px;
-  padding-right: 0;
-  align-items: flex-start;
-}
-menu>img{
-  margin-left: -124px;
-}
-menu>label>img{
-  display: block;
+.menu-btn span {
+    display: block;
+    height: 4px;
+    width: 28px;
+    border-radius: 3px;
+    background-color: #000;
+    position: absolute;
+    transition: all .4s;
 }
 
-nav{
-  height: 100%;
-  width: 100%;
-  background-color: #007b43;
-  transition: transform .5s;
-}
-nav>label{
-  display: block;
-  text-align: right;
-}
-nav>label>img{
-  height: 50px;
-  cursor: pointer;
-  margin: 5px;
-}
-nav a{
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-size: 1.2rem;
+.menu-btn span:first-child {
+    bottom: 8px;
 }
 
-#menuOpen:checked ~ nav{
-  transform: translateX(-100%);
+.menu-btn span:last-child {
+    top: 8px;
 }
-#menuOpen:checked ~ .hide{
-  display: block;
+
+#menu-btn-check:checked~.menu-btn span:nth-child(2) {
+    opacity: 0;
 }
+
+#menu-btn-check:checked~.menu-btn span:first-child {
+    bottom: 18px;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check:checked~.menu-btn span:last-child {
+    top: 18px;
+    transform: rotate(45deg);
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+
+#navi li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#navi li a {
+    display: block;
+    text-decoration: none;
+    color: var(--mainColor);
+}
+
+#navi li a:first-child {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Current';
+}
+
+#navi li a:last-child {
+    font-weight: 500;
+}
+
+/* コンテンツ */
+main {
+    margin-top: 50px;
+}
+
+section {
+    width: 100%;
+    padding: 5rem var(--sideSpace);
+}
+
+section>h2 {
+    font: 2.5rem 'Current';
+    color: var(--mainColor);
+    text-align: center;
+}
+
+section>p {
+    font-size: 1rem;
+    color: var(--subColor);
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+section>div {
+    max-width: var(--maxWidth);
+    margin: 0 auto;
 }
 
 
 /* フッター */
 footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  border-top: solid 3px #007b43;
-  padding: 0.7rem calc(50% - 450px);
-  background: #fff;
+    background: #f8f4e7;
+    padding: 2rem var(--sideSpace);
+    text-align: center;
+    color: var(--subColor);
+    width: 100%;
 }
 
-footer>a>img{
-  width: 205px;
-  margin-left: 1rem;
+.sns {
+    text-align: center;
+    padding: 2rem var(--sideSpace);
 }
 
-footer>span{
-  white-space: nowrap;
-  margin: 0 1rem;
+.sns li {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.5rem;
+    padding: 0 0.75rem;
+}
+
+.sns img {
+    height: 100%;
+}
+
+a.more {
+    display: block;
+    width: 12rem;
+    margin: 0 auto;
+    margin-top: 2.8rem;
+    padding: 0.8rem 0rem;
+    border: solid 1px var(--mainColor);
+    color: var(--mainColor);
+    text-decoration: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+    /* 600pxまでの幅の場合に適応される */
+    header.is-scroll .space {
+        display: none;
+    }
 }

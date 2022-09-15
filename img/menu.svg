@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="menu.svg"
+   xml:space="preserve"
+   viewBox="0 0 512 512"
+   y="0px"
+   x="0px"
+   id="_x32_"
+   version="1.1"><metadata
+   id="metadata17"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+   id="defs15" /><sodipodi:namedview
+   inkscape:current-layer="_x32_"
+   inkscape:window-maximized="1"
+   inkscape:window-y="-8"
+   inkscape:window-x="2552"
+   inkscape:cy="362.56568"
+   inkscape:cx="-12.330789"
+   inkscape:zoom="0.43457031"
+   showgrid="false"
+   id="namedview13"
+   inkscape:window-height="1057"
+   inkscape:window-width="1858"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff"
+   inkscape:document-rotation="0"
+   inkscape:snap-global="false" />
+<style
+   id="style2"
+   type="text/css">
+	.st0{fill:#4B4B4B;}
+</style>
+<g
+   style="fill-opacity:1;stroke-width:1.32047"
+   id="g10"
+   transform="matrix(0.75730337,0,0,0.75730337,62.130337,62.130337)">
+	<rect
+   id="rect4"
+   style="fill-opacity:1;stroke-width:1.32047"
+   height="80"
+   width="512"
+   class="st0"
+   y="16"
+   x="0" />
+	<rect
+   id="rect6"
+   style="fill-opacity:1;stroke-width:1.32047"
+   height="79.984001"
+   width="512"
+   class="st0"
+   y="216.008"
+   x="0" />
+	<rect
+   id="rect8"
+   style="fill-opacity:1;stroke-width:1.32047"
+   height="80"
+   width="512"
+   class="st0"
+   y="416"
+   x="0" />
+</g>
+</svg>

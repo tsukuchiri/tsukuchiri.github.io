@@ -1,21 +1,158 @@
-html{
-  height: 100%;
+header {
+  margin-top: -50px;
+  position: sticky;
+  background-color: #ffffff00;
+  transition: none;
 }
-body{
-  height: 100%;
+
+header use {
+  fill: #fff;
+  transition: fill .4s;
 }
+
+
+header.is-scroll {
+  background-color: #ffffff;
+  transition: background-color .3s;
+}
+
+header.is-scroll use {
+  fill: var(--mainColor);
+}
+
+.menu-btn span {
+  background-color: #ffffff;
+}
+
+
+
+header.is-scroll .menu-btn span {
+  background-color: var(--mainColor);
+}
+
+
+#menu-btn-check:checked~.menu-btn span {
+  background-color: var(--mainColor);
+}
+
+
+
+
 #top {
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: #fff;
+}
+
+.slide {
+  height: 100vh;
   background-image: url(../img/topbg.jpg);
   background-size: cover;
   background-position: 50% 46.5%;
+  text-align: center;
 }
-#top>img{
-  position: absolute;
-  left: 1rem;
-  bottom: 3%;
-  width: 70%;
-  max-width: 500px;
+
+main {
+  margin-top: 0;
+}
+
+section:nth-of-type(even) {
+  background-color: #f6f6f6;
+}
+
+
+#news table {
+  margin: 0 auto;
+}
+
+#news td {
+  padding: 0.5rem 0;
+}
+
+#news tr>td:first-child {
+  color: #555;
+  white-space: nowrap;
+  padding-right: 1rem;
+}
+
+#news a {
+  color: #000;
+  text-decoration-line: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.gallery a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+#pickup>.gallery a {
+  width: calc(calc(100% - 3rem) / 4);
+}
+
+#features>.gallery a {
+  width: calc(calc(100% - 2rem) / 3);
+}
+
+#pickup img,
+#features img {
+  width: 100%;
+  background-color: #eaeaea;
+}
+
+#about>div {
+  text-align: center;
+  line-height: 2.5;
+}
+
+#sns .sns {
+  padding: 1rem var(--sideSpace);
+}
+
+
+#sns .sns li {
+  height: 2.7rem;
+  padding: 0 1.3rem;
+}
+
+/* ここから横幅によるやつ */
+@media screen and (max-width: 980px) {
+  /* 980pxまでの幅の場合に適応される */
+  #pickup .gallery a:last-child {
+    display: none;
+  }
+  #pickup .gallery a {
+    width: calc(calc(100% - 2rem) / 3);
+  }
+  #features .gallery a {
+    width: calc(calc(100% - 1rem) / 2);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  /* 680pxまでの幅の場合に適応される */
+  #pickup .gallery a:last-child {
+    display: inline;
+  }
+  #pickup .gallery a {
+    width: calc(calc(100% - 1rem) / 2);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* 600pxまでの幅の場合に適応される */
+  #features .gallery a {
+    width: 100%;
+  }
+  #features .gallery a:nth-last-child(-n+3) {
+    display: none;
+  }
 }

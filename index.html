@@ -4,40 +4,97 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>つくちり | 筑波大学地理愛好会</title>
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
+  <title>TSUKUCHIRI | 筑波大学地理愛好会</title>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.csv.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css?1add">
   <link rel="stylesheet" href="css/topStyle.css?1add">
+  <script src="js/common.js"></script>
+  <script src="js/top.js"></script>
 </head>
 
 <body>
-  <header>
-    <h1>
-      <a href="#"><img src="img/title.svg" alt="つくちり 筑波大学地理愛好会"></a>
-    </h1>
-  </header>
-  <menu>
-    <img src="img/menul.svg">
-    <input type="checkbox" id="menuOpen">
-    <label for="menuOpen"><img src="img/menun.svg" alt="menu"></label>
-    <div class="hide"></div>
-    <nav>
-      <label for="menuOpen"><img src="img/close.svg" alt="close"></label>
-      <a href="about/">ABOUT</a>
-      <a href="map/">MAP</a>
-      <a href="report/">REPORT</a>
-      <a href="link/">LINK</a>
-    </nav>
-  </menu>
   <div id="top">
-    <img src="img/toptxt.svg" alt="旅に、でませんか。">
+    <div class="slide"></div>
   </div>
+  <menu>
+    <div>
+      <a href="#" id="menuicon"></a>
+      <ul id="navi"></ul>
+      <ul class="sns">
+      </ul>
+      </div>
+  </menu>
+  <header>
+    <div class="space"></div>
+    <a href="#top"><svg viewBox="0 0 103.14237 8.519556" class="title">
+        <use xlink:href="img/title.svg#svg872"></use>
+      </svg></a>
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn"><span></span><span></span><span></span></label>
+      </svg></a>
+  </header>
   <main>
+    <!-- <section id="news">
+      <h2>NEWS</h2>
+      <p>新着情報</p>
+      <div>
+        <table>
+          <tbody id="newsTbody">
+          </tbody>
+        </table>
+      </div>
+      <a href="news/" class="more">READ MORE</a>
+    </section> -->
+    <!-- <section id="pickup">
+      <h2>PICKUP ACTIVITIES</h2>
+      <p>活動紹介</p>
+      <div class="gallery">
+        <a href="#"><img src="img/thumbnail/none.svg" alt=""></a>
+        <a href="#"><img src="img/thumbnail/none.svg" alt=""></a>
+        <a href="#"><img src="img/thumbnail/none.svg" alt=""></a>
+        <a href="#"><img src="img/thumbnail/none.svg" alt=""></a>
+      </div>
+      <a href="activities/" class="more">READ MORE</a>
+    </section> -->
+    <section id="features">
+      <h2>FEATURES</h2>
+      <p>特集</p>
+      <div class="gallery">
+        <a href="#"><img src="img/thumbnail/169.svg" alt=""></a>
+        <a href="#"><img src="img/thumbnail/169.svg" alt=""></a>
+        <a href="#"><img src="img/thumbnail/169.svg" alt=""></a>
+        <a href="#"><img src="img/thumbnail/169.svg" alt=""></a>
+        <a href="#"><img src="img/thumbnail/169.svg" alt=""></a>
+        <a href="#"><img src="img/thumbnail/169.svg" alt=""></a>
+      </div>
+      <a href="features/" class="more">READ MORE</a>
+    </section>
+    <section id="about">
+      <h2>ABOUT US</h2>
+      <p>筑波大学地理愛好会について</p>
+      <div>将来どんな社会問題が起こったとしても、新たな時代を切り拓く「誰か」にあなた自身がなれる・・・。<br>"つくばの社工"は、そんな夢をかなえる場です。
+      </div>
+      <a href="#" class="more">READ MORE</a>
+    </section>
+    <section id="sns">
+      <h2>CONTACT</h2>
+      <p>お問い合わせ</p>
+      <ul class="sns">
+      </ul>
+    </section>
+    <!-- <section id="contact">
+      <h2>CONTACT</h2>
+      <p>お問い合わせ</p>
+    </section> -->
   </main>
   <footer>
-    <a href="#"><img src="img/title.svg" alt="つくちり 筑波大学地理愛好会"></a>
-    <span>© 2020 Tsukuchiri All Right Reserved.</span>
+    <ul class="sns">
+    </ul>
+    <span>© 2020 Tsukuchiri</span>
   </footer>
 </body>
 
