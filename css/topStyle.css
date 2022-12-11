@@ -41,12 +41,12 @@ header.is-scroll .menu-btn span {
 #top {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #fff;
 }
 
 .slide {
-  height: 100vh;
+  height: 100%;
   background-image: url(../img/topbg.jpg);
   background-size: cover;
   background-position: 50% 46.5%;
@@ -57,9 +57,6 @@ main {
   margin-top: 0;
 }
 
-section:nth-of-type(even) {
-  background-color: #f6f6f6;
-}
 
 
 #news table {
@@ -81,37 +78,16 @@ section:nth-of-type(even) {
   text-decoration-line: none;
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.gallery a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
-}
-
-#pickup>.gallery a {
-  width: calc(calc(100% - 3rem) / 4);
-}
-
-#features>.gallery a {
-  width: calc(calc(100% - 2rem) / 3);
-}
-
-#pickup img,
-#features img {
-  width: 100%;
-  background-color: #eaeaea;
-}
 
 #about>div {
   text-align: center;
   line-height: 2.5;
 }
+
+#about>div>p {
+  text-indent: 0;
+}
+
 
 #sns .sns {
   padding: 1rem var(--sideSpace);
@@ -123,36 +99,14 @@ section:nth-of-type(even) {
   padding: 0 1.3rem;
 }
 
-/* ここから横幅によるやつ */
-@media screen and (max-width: 980px) {
-  /* 980pxまでの幅の場合に適応される */
-  #pickup .gallery a:last-child {
-    display: none;
-  }
-  #pickup .gallery a {
-    width: calc(calc(100% - 2rem) / 3);
-  }
-  #features .gallery a {
-    width: calc(calc(100% - 1rem) / 2);
-  }
-}
+@media screen and (max-width: 600px) {
 
-@media screen and (max-width: 680px) {
-  /* 680pxまでの幅の場合に適応される */
-  #pickup .gallery a:last-child {
+  /* 600pxまでの幅の場合に適応される */
+  header .space {
     display: inline;
   }
-  #pickup .gallery a {
-    width: calc(calc(100% - 1rem) / 2);
-  }
-}
 
-@media screen and (max-width: 600px) {
-  /* 600pxまでの幅の場合に適応される */
-  #features .gallery a {
-    width: 100%;
-  }
-  #features .gallery a:nth-last-child(-n+3) {
+  header.is-scroll .space {
     display: none;
   }
 }

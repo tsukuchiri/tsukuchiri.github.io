@@ -1,0 +1,104 @@
+/* ヘッダの次はマージンを取る必要 */
+body>div:first-of-type{
+  margin-top: 62px;
+}
+
+
+/* 各記事のタイトル */
+.title{
+  width: 100%;
+  height: 25vw;
+  min-height: 13rem;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+
+.title>img{
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+}
+
+.title>div{
+  padding: 1rem;
+  transform: translateY(-100%);
+}
+
+.title h2{
+  margin-top: 0.3rem;
+  font-size: 1.7rem;
+}
+
+/* メイン部分 */
+main {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  padding: 5px 1rem;
+  margin: 5px auto;
+  line-height: 1.7;
+}
+
+main a{
+  text-decoration-line: none;
+  font-weight: bolder;
+  color:#c0a14f;
+  word-wrap: break-word;
+}
+
+p{
+  text-indent: 1rem;
+  margin: 0.2rem 0;
+}
+
+main h2{
+  font-size: 1.3rem;
+  padding: 0.1rem 0.8rem;
+  border: solid 1px #007b43;
+  border-left: solid 7px #007b43;
+  margin: 1.5rem 0 1rem 0;
+}
+
+
+.qa{
+  padding: 0.5rem 0;
+}
+.qa:first-of-type{
+  padding-top: 0;
+}
+.qa>div{
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 3rem;
+  background-position: 0.5rem center;
+  min-height: 3rem;
+  padding-left: 4.3rem;
+  padding-right: 0.5rem;
+  margin: 0.5rem 0;
+}
+.qa>div:first-of-type {
+  background-image: url(../img/question.svg);
+}
+.qa>div:last-of-type {
+  background-image: url(../img/answer.svg);
+}
+
+
+
+
+/* コピペ用 */
+.follow {
+  display: inline-block;
+  width: 6rem;
+  max-width: 49%;
+  padding: 5px;
+}
+
+.follow img {
+  width: 100%;
+}
