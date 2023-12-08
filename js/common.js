@@ -1,7 +1,8 @@
 function getCsv(url) {
   //CSVファイルを文字列で取得
   var txt = new XMLHttpRequest();
-  txt.open('get', url, false);
+  var randam = Math.random()*10;
+  txt.open('get', `${url}?${randam}`, false);
   txt.send();
 
   //改行ごとに配列化
