@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>「URまちとくらしのミュージアム」を見学しました | 筑波大学地理愛好会</title>
+  <script src="../../js/jquery-3.6.0.min.js"></script>
+  <script src="../../js/jquery.csv.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900&display=swap&subset=japanese"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/style.css?1d">
+  <script src="../../js/common.js?ss"></script>
+</head>
+
+<body>
+  <menu>
+    <div>
+      <a href="#" id="menuicon"></a>
+      <ul id="navi"></ul>
+      <ul class="sns">
+      </ul>
+      </div>
+  </menu>
+  <header>
+    <div class="space"></div>
+    <a href="../../"><svg viewBox="0 0 103.14237 8.519556" class="title">
+        <use xlink:href="../../img/title.svg#svg872"></use>
+      </svg></a>
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn"><span></span><span></span><span></span></label>
+      </svg></a>
+  </header>
+  <main>
+  <div id="title">
+    <img src="../img/titlebg.jpg">
+    <div>
+      <h2>FEATURES</h2>
+      <p>特集</p>
+    </div>
+  </div>
+  <section id="wakamori">
+    <h3>「URまちとくらしのミュージアム」を見学しました</h3>
+    <p>2024/11/29</p>
+    <div>
+      <p>2024年11月29日、東京都北区にてURまちとくらしのミュージアムを見学しました。
+        URまちとくらしのミュージアムは「ヌーヴェル赤羽台」（旧：赤羽台団地）の一区画の中に位置しており、道中ではURによって再生された新しい団地の数々を間近で見ることができました。</p>
+      <img src="img/ur_nouvelle.jpg" alt="新しく生まれ変わった「ヌーヴェル赤羽台」"><p>新しく生まれ変わった「ヌーヴェル赤羽台」</p>
+      <p>ミュージアムでは、UR都市機構およびその前身である日本住宅公団が手がけてきた団地の住戸の復元模型や、実際に住宅に使われていた部品などを見学しました。
+        展示を通して、集合住宅の設計の変遷を実際に見て学ぶことができました。また、住宅公団やURが戦後の住宅不足の解消に向けて行ってきた取り組みについても学ぶことができました。</p>
+      <img src="img/ur_hasune.jpg" alt="蓮根団地の復元模型"><p>蓮根団地の復元模型</p>
+      <p>さらに、今回の巡検では特別にUR都市機構の担当者様にお越しいただき、URの事業についてご説明をいただきました。
+        賃貸住宅事業のほかにも、都市再生事業や災害復興支援などの事業についても理解を深めることができました。</p>
+      <img src="img/ur_groupphoto.jpg" alt="集合写真">
+    </div>
+  </section>
+</main>
+  <footer>
+    <ul class="sns">
+    </ul>
+    <span>© 2025 Tsukuchiri</span>
+  </footer>
+</body>
+
+</html>
