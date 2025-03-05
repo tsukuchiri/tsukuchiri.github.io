@@ -92,7 +92,7 @@ $(function () {
   });
   $('.gallery.features_all').each(function () {
     features.forEach(feature => {
-      $(this).append(`<a href="${getLevel(dirCount)}features/${feature[2]}"><img src="${getLevel(dirCount)}${feature[3] != "" ? "features/" + feature[3] : "img/thumbnail/169.svg"}" alt="">${feature[1]} <span class="date">（${feature[0]}）</span> </a>`);
+      $(this).append(`<a href="${getLevel(dirCount)}features/${feature[2]}"><img src="${getLevel(dirCount)}${feature[3] != "" ? "features/" + feature[3] : "img/thumbnail/169.svg"}" alt="">${feature[1]} <span class="date">| ${feature[0]} </span> </a>`);
     });
   });
 });
