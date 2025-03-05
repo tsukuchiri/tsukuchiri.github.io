@@ -493,7 +493,8 @@ a.more {
 
 /* 2025/3/5 featureのタイトルの後ろに表示する日付 */
 .date {
-    font-family: inherit;
+    white-space: normal;    /* 長い文字列があれば折り返す */
+    word-wrap: break-word;  /* 単語の途中で改行 */
     font-size: 0.8rem;
     color: #888;
     margin-left: 5px;
