@@ -494,7 +494,7 @@ a.more {
 /* 2025/3/5 featureのタイトルの後ろに表示する日付 */
 .date {
     font-family: inherit;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #888;
     margin-left: 5px;
 }
